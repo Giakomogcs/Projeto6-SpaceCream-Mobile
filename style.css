@@ -1,0 +1,173 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+
+  font-size: 62.5%;
+
+  --fs-body: 1.6rem;
+  --fs-heading: 4rem;
+  --fs-heading-sm: 2rem;
+
+  --fc-primary: #FFFFFF;
+  --fc-secondary: #23053A;;
+  --fc-secondary-dark: #4A4E69;
+
+  --ff-heading: 'Staatliches', cursive;
+  --ff-main: 'Palanquin', sans-serif;;
+}
+
+.page{
+  padding: 1.4rem 3.2rem;
+  max-width: 38.4rem;
+  margin: 0 auto;
+}
+
+body{
+  background-color: #EFF1FF;
+
+  font-size: var(--fs-body);
+  color: var(--fc-primary);
+  
+  font-family: var(--ff-heading);
+  
+}
+
+header{
+  text-align: center;
+  min-height: 32rem;
+  
+  
+  background-color: #8E9AAF;
+}
+
+header img{
+  animation: topdown;
+  animation-duration: 1s;
+  margin: 3.2rem auto;
+}
+
+header h1{
+  background-color: #CBC0D3;
+  text-transform: uppercase;
+  color: var(--fc-primary);
+  padding: 0.8rem;
+
+  font-weight: 400;
+  font-size: var(--fs-heading);
+  line-height: 3.4rem;
+  
+  text-align: center;
+}
+
+
+main{
+  display: grid;
+  gap: 3.2rem;
+  
+}
+
+main p{
+  color: var(--fc-secondary);
+  font-family: var(--ff-main);
+  
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2rem;
+  
+  align-items: center;
+  text-align: center;
+  
+  margin-bottom: 6rem;
+  
+  min-width: 31rem;
+}
+
+.card{
+  position: relative;
+  font-family: var(--ff-heading);
+  color: var(--fc-secondary-dark);
+}
+
+.card img{
+  height: 41.6rem;
+  object-fit: cover;
+  border-radius: 20px;
+  
+  width: 100%;
+  height: auto;
+  
+  transition-property: tranform;
+  transition-duration: all 400ms;
+  animation: rightleft 1s .5s backwards;
+}
+
+.card:hover{
+  transform: scale(1.05);
+  filter: brightness(1) saturate(0.8);
+}
+
+.card span{
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+
+  font-size: var(--fs-heading-sm);
+  font-weight: 400;
+  line-height: 3.4rem;
+
+  background: #FEEAFA;
+  border-radius: 2rem;
+
+  height: 3.5rem;
+  min-width: 11.2rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-weight: 400;
+  color: var(--fc-secondary-dark);
+
+  animation: leftright 1s .7s backwards;
+}
+
+@keyframes topdown {
+  0%{
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rightleft {
+  0%{
+    opacity: 0;
+    transform: translatex(25px);
+  }
+  
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes leftright {
+  0%{
+    opacity: 0;
+    transform: translatex(-25px);
+  }
+  
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
